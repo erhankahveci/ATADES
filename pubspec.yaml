@@ -1,0 +1,72 @@
+name: ertu_mobile_uni
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  google_fonts: ^6.3.3
+
+  supabase_flutter: ^2.8.3  # Veritabanı ve Auth için
+  google_maps_flutter: ^2.14.0 # Harita için
+  geolocator: ^14.0.2       # Konum almak için
+  image_picker: ^1.2.1      # Fotoğraf seçmek için
+  intl: ^0.20.2             # Tarih formatı ve localization için
+
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  url_launcher: ^6.3.2
+  shared_preferences: ^2.5.4
+  firebase_core: ^4.3.0
+  firebase_messaging: ^16.1.0
+  flutter_dotenv: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  
+  # İkon Paketi
+  flutter_launcher_icons: ^0.13.1
+
+  # Native Splash Paketi
+  flutter_native_splash: ^2.3.10
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/logo/
+    - .env
+
+# 1. UYGULAMA İKONU AYARLARI (Telefondaki minik ikon)
+flutter_launcher_icons:
+  android: "mipmap"
+  ios: true
+  image_path: "assets/images/logo/app_icon.png" 
+  min_sdk_android: 21
+  adaptive_icon_background: "#F9FAFB"
+
+
+flutter_native_splash:
+  color: "#F9FAFB"
+ 
+  image: "assets/images/logo/splash_logo_safe.png"
+  
+  
+  android_12:
+    image: "assets/images/logo/splash_logo_safe.png"
+    icon_background_color: "#F9FAFB"
+    
+  ios: true
+  android: true
