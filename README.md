@@ -1,16 +1,25 @@
-# ertu_mobile_uni
+# ATADES (Ertu Mobile Uni)
 
-A new Flutter project.
+Bu proje üniversite acil durum bildirim sistemidir.
 
-## Getting Started
+## 🛠 Kurulum ve Ayarlar
 
-This project is a starting point for a Flutter application.
+Bu projeyi çalıştırmak için kendi API anahtarlarınızı eklemeniz gerekir.
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Çevre Değişkenleri (.env)
+Ana dizinde `.env` adında bir dosya oluşturun ve içine Supabase bilgilerinizi girin:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+SUPABASE_URL=https://sizin-url.supabase.co
+SUPABASE_ANON_KEY=sizin-anon-key
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Google Maps API (Android)
+`android/local.properties` dosyasını açın (yoksa oluşturun) ve API anahtarınızı ekleyin:
+
+sdk.dir=/path/to/android/sdk
+flutter.sdk=/path/to/flutter/sdk
+MAPS_API_KEY=AIzaSyD...SIZIN_GOOGLE_MAPS_KEY...
+
+### 3. Firebase Kurulumu
+- Kendi Firebase projenizi oluşturun.
+- `google-services.json` dosyasını `android/app/` içine atın.
+- `GoogleService-Info.plist` dosyasını `ios/Runner/` içine atın.
